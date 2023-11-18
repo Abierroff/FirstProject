@@ -7,21 +7,23 @@
 </head>
 <body>
     <h1>hello!</h1> <!-- titulo -->
-    <input id="input-name">Name</input>  <!-- cria um campo input -->
+    <input id="input-name">Name</input> </br> <!-- cria um campo input -->
+    <input id="input-surname">Surname</input>
     </br> <!-- Da um espaço -->
     </br>
     <button onclick="chooseName()">Send</button>  <!-- cria um botao que chama uma funçao assim que é clicado -->
     <script> 
         //aqui é todo o javascript manipulando o DOM
         function chooseName(){
-            const name = document.getElementById("input-name").value
-                   
-            if (name) {
-                alert(`Hello ${name}`)    
+            const name = document.getElementById("input-name").value       
+            const surname = document.getElementById("input-surname").value 
+            
+            if (name && surname) {
+                alert(`Hello ${name} ${surname}`)    
                 return;
             }
 
-            alert("Name is required.")
+            alert("Inputs is required.")
             
         }
     </script> <!-- Aqui roda todo js -->

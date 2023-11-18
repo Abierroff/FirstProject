@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+<body>
+    <h1>hello!</h1> <!-- titulo -->
+    <input id="input-name">Name</input>  <!-- cria um campo input -->
+    </br> <!-- Da um espaço -->
+    </br>
+    <button onclick="chooseName()">Send</button>  <!-- cria um botao que chama uma funçao assim que é clicado -->
+    <script> 
+        //aqui é todo o javascript manipulando o DOM
+        function chooseName(){
+            const name = document.getElementById("input-name").value
+                   
+            if (name) {
+                alert(`Hello ${name}`)    
+                return;
+            }
+
+            alert("Name is required.")
+            
+        }
+    </script> <!-- Aqui roda todo js -->
+</body>
+</html>
